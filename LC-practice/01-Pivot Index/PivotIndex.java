@@ -8,13 +8,12 @@ class Solution {
     	int sum =0, leftSum = 0;
     	for(int eleVal : nums) sum += eleVal;
     	for(int i=0; i<len ;i++) {
-    		if(leftSum == sum-nums[i]-leftSum) {
-    			return i;
-    		}
-    		leftSum += nums[i];
+           if(leftSum == sum-nums[i]-leftSum) {
+              return i;
+    	   }
+    	   leftSum += nums[i];
     	}
-		return -1;
-        
+        return -1;
     }
 }
 
